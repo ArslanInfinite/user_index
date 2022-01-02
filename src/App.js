@@ -1,4 +1,4 @@
-export default function App() {
+export const App = () => {
   return (
     <div>
 
