@@ -1,4 +1,4 @@
-export const AddUser = props => {
+const AddUser = props => {
   const addUserHandler = event => {
 
     event.preventDefault()
@@ -14,3 +14,5 @@ export const AddUser = props => {
     </form>
   )
 }
+
+export default AddUser
