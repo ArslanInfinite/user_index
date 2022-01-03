@@ -5,7 +5,9 @@ const Button = props => {
     <button 
     className={classes.button} 
     type={props.type || 'button'} // if props.type is undefined, default to the 'button' value for the built-in button
-    onClick={props.onClick}>
+    onClick={props.onClick}
+    >
+      {props.children}
     </button>
   )
 }
