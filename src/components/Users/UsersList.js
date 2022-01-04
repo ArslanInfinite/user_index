@@ -1,14 +1,16 @@
-
+import Card from "../UI/Card"
 
 const UsersList = props => {
   return (
-    <div>
-      {props.users.map(user => 
-      <li>
-        {user.name} ({user.age} years old)
-      </li>
-      )}
-    </div>
+    <Card>
+      <ul>
+        {props.users.map(user => 
+        <li>
+          {user.name} ({user.age} years old)
+        </li>
+        )}
+      </ul>
+    </Card>
   )
 }
 
