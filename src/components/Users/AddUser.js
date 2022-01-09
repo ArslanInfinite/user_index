@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Card from '../UI/Card'
 import Button from '../UI/Button'
 import ErrorModal from '../UI/ErrorModal'
@@ -6,6 +6,10 @@ import Wrapper from '../Helpers/Wrapper'
 import classes from './AddUser.module.css'
 
 const AddUser = props => {
+
+  const nameInputRef = useRef()
+  const ageInputRef = useRef()
+
   const [enteredUsername, setEnteredUsername] = useState('')
   const [enteredAge, setEnteredAge] = useState('')
   const [error, setError] = useState()
