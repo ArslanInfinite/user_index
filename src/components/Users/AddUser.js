@@ -1,4 +1,6 @@
-import { useState, useRef } from 'react'
+import { useState, useRef } from 'react' 
+// I prefer to not use refs since I want React to do all DOM manipulations for me. 
+// Eventually I will be using redux for state management and don't need another hook to maintain information for me
 import Card from '../UI/Card'
 import Button from '../UI/Button'
 import ErrorModal from '../UI/ErrorModal'
