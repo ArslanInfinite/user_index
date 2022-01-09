@@ -18,21 +18,21 @@ const AddUser = props => {
     event.preventDefault()
     const enteredName = nameInputRef.current.value
     const enteredUserAge = ageInputRef.current.value
-    if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
+    if (enteredUsername.trim().length === 0 || enteredUserAge.trim().length === 0) {
       setError({
         title: 'Invalid Input', 
         message: 'Please enter a valid name and age (real values)'
       })
       return
     }
-    if(+enteredAge < 1){
+    if(+enteredUserAge < 1){
       setError({
         title: 'Invalid Age', 
         message: 'Please add a real age (greater than zero)'
       })
       return 
     }
-    props.onAddUser(enteredUsername, enteredAge)
+    props.onAddUser(enteredName, enteredUserAge)
     setEnteredUsername('')
     setEnteredAge('')
   }
