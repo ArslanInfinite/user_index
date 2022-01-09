@@ -16,6 +16,8 @@ const AddUser = props => {
 
   const addUserHandler = event => {
     event.preventDefault()
+    const enteredName = nameInputRef.current.value
+    const enteredUserAge = ageInputRef.current.value
     if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
       setError({
         title: 'Invalid Input', 
@@ -59,6 +61,7 @@ const AddUser = props => {
             type='text' 
             value={enteredUsername} 
             onChange={usernameChangeHandler}
+            ref={nameInputRef}
           />
           <label htmlFor='age'>Age</label>
           <input 
@@ -66,6 +69,7 @@ const AddUser = props => {
             type='number' 
             value={enteredAge} 
             onChange={agechangeHandler}
+            ref={ageInputRef}
           />
           <Button type='submit'>Add User</Button>
         </form>
